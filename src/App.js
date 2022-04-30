@@ -4,10 +4,11 @@ import Heading from "./components/Heading";
 import Data from "./data.json";
 import { v4 as uuidv4 } from "uuid";
 import ReactBootstrap from "./components/React_Bootstrap/ReactBootstrap";
+import State from "./components/State";
 
-function App() {
-    console.log(uuidv4());
-  let items = [];
+const App = () => {
+
+    let items = [];
   //   for (let x = 0; x < Data.length; x++) {
   //     items.push(
   //       <Card
@@ -35,13 +36,14 @@ function App() {
       cardBtn={item.btn}
     />
   ));
-
   return (
     <div className="main">
       <Heading />
       <ReactBootstrap />
+      <State />
       {items}
     </div>
-  );
+  )
 }
-export default App;
+
+export default App

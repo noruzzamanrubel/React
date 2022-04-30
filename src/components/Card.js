@@ -1,5 +1,7 @@
-function Card(props) {
-  const{cardTitle, cardDesc, cardBtn} = props;
+import React from "react";
+
+const Card = (props) => {
+  const { cardTitle, cardDesc, cardBtn } = props;
   return (
     <div className="cardWrapper">
       <div className="card">
@@ -11,6 +13,6 @@ function Card(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Card;

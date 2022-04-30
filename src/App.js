@@ -3,6 +3,7 @@ import Card from "./components/Card";
 import Heading from "./components/Heading";
 import Data from "./data.json";
 import { v4 as uuidv4 } from "uuid";
+import ReactBootstrap from "./components/React_Bootstrap/ReactBootstrap";
 
 function App() {
     console.log(uuidv4());
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="main">
       <Heading />
+      <ReactBootstrap />
       {items}
     </div>
   );

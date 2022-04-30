@@ -21,7 +21,7 @@ body{
     margin-bottom: 25px;
 }
 .card {
-    background-color: #A459FF;
+    background-color: #A459FF !important;
     box-shadow: 2px 2px 4px gray;
     padding: 25px 25px 50px;
     width: 400px;

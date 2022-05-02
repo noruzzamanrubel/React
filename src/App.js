@@ -7,6 +7,7 @@ import ReactBootstrap from "./components/React_Bootstrap/ReactBootstrap";
 import State from "./components/State";
 import Index from "./components/Conditional_Rendering/Index";
 import Onchange from "./components/Event_Handler/Onchange";
+import Index2 from "./components/UseState/Index";
 const App = () => {
 
     let items = [];
@@ -44,6 +45,7 @@ const App = () => {
       <State />
       <Index />
       <Onchange />
+      <Index2 />
       {items}
     </div>
   )

@@ -1,28 +1,25 @@
 import React, { useState } from "react";
 
 function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+  const { name, email, password } = user;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted");
-    let userInfo = {
-      name,
-      email,
-      password,
-    };
-    console.log(userInfo);
+
+    console.log(user);
   };
 
   return (
@@ -36,7 +33,7 @@ function Form() {
             name="name"
             id="name"
             value={name}
-            onChange={handleNameChange}
+            onChange={handleChange}
             required
           />
         </div>
@@ -47,7 +44,7 @@ function Form() {
             name="email"
             id="email"
             value={email}
-            onChange={handleEmailChange}
+            onChange={handleChange}
             required
           />
         </div>
@@ -58,12 +55,14 @@ function Form() {
             name="password"
             id="password"
             value={password}
-            onChange={handlePasswordChange}
+            onChange={handleChange}
             required
           />
         </div>
         <div className="formGroup">
-          <button className="count_btn" type="Submit">Register</button>
+          <button className="count_btn" type="Submit">
+            Register
+          </button>
         </div>
       </form>
     </div>

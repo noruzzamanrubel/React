@@ -64,3 +64,6 @@ button.count_btn {
     font-weight: 700;
     width: 80px;
 }
+.formGroup {
+    margin-bottom: 10px;
+}

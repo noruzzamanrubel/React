@@ -8,6 +8,7 @@ import State from "./components/State";
 import Index from "./components/Conditional_Rendering/Index";
 import Onchange from "./components/Event_Handler/Onchange";
 import Index2 from "./components/UseState/Index";
+import Form from "./components/Form/Form";
 const App = () => {
 
     let items = [];
@@ -46,6 +47,7 @@ const App = () => {
       <Index />
       <Onchange />
       <Index2 />
+      <Form />
       {items}
     </div>
   )

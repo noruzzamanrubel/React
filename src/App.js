@@ -9,9 +9,9 @@ import Index from "./components/Conditional_Rendering/Index";
 import Onchange from "./components/Event_Handler/Onchange";
 import Index2 from "./components/UseState/Index";
 import Form from "./components/Form/Form";
+import Child from "./components/State_Lifting/Child";
 const App = () => {
-
-    let items = [];
+  let items = [];
   //   for (let x = 0; x < Data.length; x++) {
   //     items.push(
   //       <Card
@@ -22,15 +22,15 @@ const App = () => {
   //     );
   //   }
 
-//   items = Data.map((item, index) => (
-//     <Card
-//       key={index}
-//       cardTitle={item.title}
-//       cardDesc={item.desc}
-//       cardBtn={item.btn}
-//     />
-//   ));
-    //data maping with unique id
+  //   items = Data.map((item, index) => (
+  //     <Card
+  //       key={index}
+  //       cardTitle={item.title}
+  //       cardDesc={item.desc}
+  //       cardBtn={item.btn}
+  //     />
+  //   ));
+  //data maping with unique id
   items = Data.map((item) => (
     <Card
       key={uuidv4()}
@@ -39,6 +39,10 @@ const App = () => {
       cardBtn={item.btn}
     />
   ));
+  const data = "I am from Parent Component";
+  const handleChildData = (data) => {
+    console.log(data);
+  };
   return (
     <div className="main">
       <Heading />
@@ -48,9 +52,10 @@ const App = () => {
       <Onchange />
       <Index2 />
       <Form />
+      <Child data={data} onChildData={handleChildData} />
       {items}
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -10,6 +10,7 @@ import Onchange from "./components/Event_Handler/Onchange";
 import Index2 from "./components/UseState/Index";
 import Form from "./components/Form/Form";
 import Child from "./components/State_Lifting/Child";
+import Home from "./components/State_Lifting/Home";
 const App = () => {
   let items = [];
   //   for (let x = 0; x < Data.length; x++) {
@@ -53,6 +54,7 @@ const App = () => {
       <Index2 />
       <Form />
       <Child data={data} onChildData={handleChildData} />
+      <Home />
       {items}
     </div>
   );

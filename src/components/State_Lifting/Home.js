@@ -1,19 +1,23 @@
-import React, { useState } from "react";
-import NewTodo from "./NewTodo";
-import Todos from "./Todos";
-const dummyData = ["Todo 1", "Todo 2", "Todo 3"];
+import React, { useState } from 'react'
+import Todos from './Todos'
+import NewTodo from './NewTodo'
+import { v4 as uuidv4 } from "uuid";
 
 const Home = () => {
-  const [todos, setTodos] = useState(dummyData);
-  const handleNewTodo = (todo) => {
-    setTodos([...todos, todo]);
-  };
+  const [todos, setTodos] = useState([]);
+  const handleAddTodo = (todo) => {
+    setTodos([...todos, { ...todo, id: uuidv4() }]);
+  }
+  const handleRemoveTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }
   return (
-    <div>
-      <NewTodo onTodo={handleNewTodo} />
-      <Todos todos={todos} />
+    <div className='home'>
+      <h1>Basic Todo App</h1>
+      <NewTodo onAddTodo={handleAddTodo} />
+      <Todos todos={todos} onRemoveTodo={handleRemoveTodo} />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

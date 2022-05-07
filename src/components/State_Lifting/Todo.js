@@ -1,8 +1,24 @@
-import React from "react";
-import { v4 as uuidv4 } from "uuid";
+import React from 'react'
 
 const Todo = (props) => {
-  return <p key={uuidv4()}>{props.todo}</p>;
-};
+  const { title, desc } = props.todo;
+  const { id } = props;
+  const handleClick = (id) => {
+    props.onRemoveTodo(id);
+  }
+  return (
+    <article className='todo'>
+      <div>
+        <h3>{title}</h3>
+        <p>{desc}</p>
+      </div>
+      <div>
+        <button className="btn" onClick={() => { handleClick(id); }}>
+          <i className="fa fa-trash fa-2x"></i>
+        </button>
+      </div>
+    </article>
+  )
+}
 
-export default Todo;
+export default Todo

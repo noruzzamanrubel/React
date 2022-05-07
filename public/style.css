@@ -64,6 +64,90 @@ button.count_btn {
     font-weight: 700;
     width: 80px;
 }
+
 .formGroup {
     margin-bottom: 10px;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .6rem;
+    width: 50%;
+}
+
+.todo h3 {
+    color: #fff;
+}
+
+.todo p {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.home h1 {
+    margin: 1rem;
+}
+
+.form {
+    width: 50%;
+    background-color: #333;
+    color: #fff;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: .6rem;
+}
+
+.form-field {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.form-field label {
+    flex-basis: 20%;
+}
+
+.form-field input {
+    flex-basis: 80%;
+    border: none;
+    border-radius: .6rem;
+    padding: .2rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+.form-field textarea {
+    flex-basis: 80%;
+    resize: none;
+    border: none;
+    border-radius: .6rem;
+    padding: .2rem;
+}
+
+.form button {
+    border: none;
+    border-radius: .6rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.form button:hover {
+    background-color: orange;
+    color: #fff;
+}
+
+.btn {
+    border: none;
+    color: #ff0000 !important;
+    background-color: transparent;
+    cursor: pointer;
 }

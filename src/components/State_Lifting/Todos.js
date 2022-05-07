@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react'
+import Todo from './Todo'
 import { v4 as uuidv4 } from "uuid";
-import Todo from "./Todo";
 
 const Todos = (props) => {
   return (
-    <div>
-      {props.todos.map((todo) => (
-        <Todo key={uuidv4()} todo={todo} />
-      ))}
-    </div>
-  );
-};
+    <section>
+      {props.todos.map((todo) =>
+        <Todo key={uuidv4()} todo={todo} onRemoveTodo={props.onRemoveTodo} id={todo.id} />
+      )}
+    </section>
+  )
+}
 
-export default Todos;
+export default Todos

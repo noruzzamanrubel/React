@@ -13,6 +13,7 @@ import Child from "./components/State_Lifting/Child";
 import Home from "./components/State_Lifting/Home";
 import Toggle from "./components/Toggle/Toggle";
 import FAQS from "./components/FAQS/FAQS";
+import Timer from "./components/UseEffect/Timer";
 const App = () => {
   let items = [];
   //   for (let x = 0; x < Data.length; x++) {
@@ -44,7 +45,7 @@ const App = () => {
   ));
   const data = "I am from Parent Component";
   const handleChildData = (data) => {
-    console.log(data);
+    // console.log(data);
   };
   return (
     <div className="main">
@@ -60,6 +61,7 @@ const App = () => {
       <Home />
       <Toggle />
       <FAQS />
+      <Timer />
     </div>
   );
 };

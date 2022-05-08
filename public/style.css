@@ -189,3 +189,16 @@ input:focus {
 .faq p {
     transition: 1s ease-in-out;
 }
+
+.text-center {
+    text-align: center;
+    padding-top: 25px;
+}
+.heading {
+    display: inline-block;
+    text-align: center;
+    background-color: #556EFF;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+}

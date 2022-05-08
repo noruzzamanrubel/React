@@ -13,8 +13,8 @@ const Timer = () => {
         }
     }, [count, time]);
     return (
-        <div style={{ textAlign: "center", padding: "20px 0" }}>
-            <h1>UseEffect</h1>
+        <div className='text-center'>
+            <h1 className='heading'>UseEffect</h1>
             <h1>I've rendered {count} times!</h1>
             <h1>I've rendered {time} times!</h1>
         </div>

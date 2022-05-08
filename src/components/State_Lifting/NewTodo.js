@@ -27,11 +27,11 @@ const NewTodo = (props) => {
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-field">
         <label>Title: </label>
-        <input type="text" name="title" id="title" onChange={handleChange} value={title} />
+        <input type="text" name="title" id="title" onChange={handleChange} value={title} required />
       </div>
       <div className="form-field">
         <label>Description: </label>
-        <input type="textarea" name="desc" id="desc" onChange={handleChange} value={desc} />
+        <input type="textarea" name="desc" id="desc" onChange={handleChange} value={desc} required />
       </div>
       <div>
         <button type="submit">

@@ -11,6 +11,7 @@ import Index2 from "./components/UseState/Index";
 import Form from "./components/Form/Form";
 import Child from "./components/State_Lifting/Child";
 import Home from "./components/State_Lifting/Home";
+import Toggle from "./components/Toggle/Toggle";
 const App = () => {
   let items = [];
   //   for (let x = 0; x < Data.length; x++) {
@@ -48,6 +49,7 @@ const App = () => {
     <div className="main">
       <Heading />
       <ReactBootstrap />
+      {items}
       <State />
       <Index />
       <Onchange />
@@ -55,7 +57,7 @@ const App = () => {
       <Form />
       <Child data={data} onChildData={handleChildData} />
       <Home />
-      {items}
+      <Toggle />
     </div>
   );
 };

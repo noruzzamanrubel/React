@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Toggle = () => {
-    
+
     const [toggle, setToggle] = useState(true);
 
     return (

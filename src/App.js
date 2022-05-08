@@ -12,6 +12,7 @@ import Form from "./components/Form/Form";
 import Child from "./components/State_Lifting/Child";
 import Home from "./components/State_Lifting/Home";
 import Toggle from "./components/Toggle/Toggle";
+import FAQS from "./components/FAQS/FAQS";
 const App = () => {
   let items = [];
   //   for (let x = 0; x < Data.length; x++) {
@@ -58,6 +59,7 @@ const App = () => {
       <Child data={data} onChildData={handleChildData} />
       <Home />
       <Toggle />
+      <FAQS />
     </div>
   );
 };

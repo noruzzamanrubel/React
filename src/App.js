@@ -15,7 +15,8 @@ import Home from "./components/State_Lifting/Home";
 import Toggle from "./components/Toggle/Toggle";
 import FAQS from "./components/FAQS/FAQS";
 import Timer from "./components/UseEffect/Timer";
-import DataFetch from "./components/UseEffect/DataFetch";
+import UseReduser from "./components/UseReducer/UseReduser";
+// import DataFetch from "./components/UseEffect/DataFetch";
 
 const App = () => {
   let items = [];
@@ -65,7 +66,8 @@ const App = () => {
       <Toggle />
       <FAQS />
       <Timer />
-      <DataFetch />
+      <UseReduser />
+      {/* <DataFetch /> */}
     </div>
   );
 };

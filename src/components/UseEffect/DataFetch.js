@@ -8,7 +8,7 @@ const DataFetch = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos/zd')
+        fetch('https://jsonplaceholder.typicode.com/todos/')
             .then((response) => {
                 if (!response.ok) {
                     throw Error({ ErrorMessage });

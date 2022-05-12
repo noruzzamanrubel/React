@@ -9,6 +9,15 @@ const UseReduser = () => {
 
     const [books, setBooks] = useState(dummyData);
     const [bookName, setBookName] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalText, setModalText] = useState('');
+
+    const Modal = ({ modalText }) => {
+        return (
+            <p>{modalText}</p>
+        )
+    }
+
     const handleChange = (e) => {
         setBookName(e.target.value);
     }
@@ -19,15 +28,20 @@ const UseReduser = () => {
             return [...PrevState, newBook];
         });
         setBookName('');
+        setIsModalOpen(true);
+        setModalText('Book Added Successfully');
     }
     return (
-        <div>
-            <h1>Book List</h1>
+        <div className='text-center'>
+            <h1 className='heading'>Book List</h1>
 
             <form onSubmit={handleSubmit}>
-                <input type="text" value={bookName} onChange={handleChange} />
+                <input type="text" value={bookName} onChange={handleChange} required />
                 <button type="submit">Add Book</button>
             </form>
+
+            {isModalOpen && <Modal modalText={modalText} />}
+
             {books.map((book) => {
                 const { id, name } = book
                 return (

@@ -16,6 +16,7 @@ import Toggle from "./components/Toggle/Toggle";
 import FAQS from "./components/FAQS/FAQS";
 import Timer from "./components/UseEffect/Timer";
 import UseReduser from "./components/UseReducer/UseReduser";
+import Componet1 from "./components/UseContext/Componet1";
 // import DataFetch from "./components/UseEffect/DataFetch";
 
 const App = () => {
@@ -66,8 +67,9 @@ const App = () => {
       <Toggle />
       <FAQS />
       <Timer />
-      <UseReduser />
+      {/* <UseReduser /> */}
       {/* <DataFetch /> */}
+      <Componet1 />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 //pages
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
+import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
 import Error from "./pages/404";
 import Navbar from "./components/Navbar/Navbar";
@@ -64,7 +65,8 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="/blogs/:title" element={<SingleBlog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>

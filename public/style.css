@@ -153,6 +153,7 @@ input:focus {
     border: none !important;
     outline: none !important;
 }
+
 button:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -240,4 +241,29 @@ nav .active {
     background-color: #556EFF;
     color: white !important;
     border-radius: 10px;
+}
+
+section {
+    display: grid;
+    grid-gap: 1rem;
+
+}
+
+article {
+    background-color: #ff9455;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 600px) {
+    section {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        grid-template-columns: auto auto auto;
+    }
 }

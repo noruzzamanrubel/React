@@ -13,8 +13,10 @@ const Componet1 = () => {
     const [text, setText] = useState(dumyData2);
     return (
         <UserContext.Provider value={{ user, text }}>
-            <h1>{`Hello ${user.name}`}</h1>
-            <Componet2 />
+            <div className='text-center'>
+                <h1 className='heading'>UserContext</h1>
+                <Componet2 />
+            </div>
         </UserContext.Provider>
     )
 }

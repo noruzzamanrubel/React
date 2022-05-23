@@ -24,7 +24,7 @@ const Blog = () => {
                         <article key={id}>
                             <h2>{title}</h2>
                             <p>{TruncateString(desc, 200)}</p>
-                            <Link to={title}>Learn More</Link>
+                            <Link to={title} state={{ id, title, desc }}>Learn More</Link>
                         </article>
                     )
                 })}

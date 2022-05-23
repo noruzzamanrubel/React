@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Error from "./pages/404";
 import Navbar from "./components/Navbar/Navbar";
 import User from "./pages/User";
+import Protected from "./pages/Protected";
 
 // import Card from "./components/Card";
 // import Heading from "./components/Heading";
@@ -43,6 +44,7 @@ const App = () => {
   // const handleChildData = (data) => {
   //   // console.log(data);
   // };
+  const [isLogined, setIsLogined] = React.useState(false);
   return (
     // <div className="main">
     //   <Heading />
@@ -64,12 +66,19 @@ const App = () => {
     // </div>
     <BrowserRouter>
       <Navbar />
+
+      {isLogined ? <button onClick={() => {
+        setIsLogined(!isLogined);
+      }}>Log Out</button> : <button onClick={() => {
+        setIsLogined(!isLogined);
+      }}>Log In</button>}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:title" element={<SingleBlog />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/user" element={<Protected isLogined={isLogined}><User /></Protected>} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

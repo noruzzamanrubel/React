@@ -1,9 +1,9 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 
-const Protected = ({isLogined, children}) => {
+const Protected = ({ isLogined, children }) => {
     if (!isLogined) {
-        return <Navigate to="/" replace />
+        return "You are not authorized to view this page. Please login first.";
     }
     return children;
 }

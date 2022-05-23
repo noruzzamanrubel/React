@@ -8,6 +8,7 @@ import SingleBlog from "./pages/SingleBlog";
 import Contact from "./pages/Contact";
 import Error from "./pages/404";
 import Navbar from "./components/Navbar/Navbar";
+import User from "./pages/User";
 
 // import Card from "./components/Card";
 // import Heading from "./components/Heading";
@@ -68,6 +69,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:title" element={<SingleBlog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/user" element={<User />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
